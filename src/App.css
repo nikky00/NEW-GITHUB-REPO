@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: red solid 1px; */
+}
+
+/* Mobile */
+@media screen and (max-width: 573px) {
+    .main {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .userlink ul {
+        grid-template-columns: 1fr;
+    }
+
+    .main img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .main .profilepicture {
+        display: none;
+    }
+
+    .userhead .profilepicture {
+        display: flex;
+    }
+
+    .search input {
+        font-size: 13px;
+    }
+
+    .search button {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .userinfo {
+        margin-left: 41px;
+    }
+
+    .userinfo h2 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .userinfo h3 {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+    
+    .userinfo h4 {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .userdesc {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .userstats {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .userstats > * > span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .userlink {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 573px) and (max-width: 729px) {
+    .main {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .userlink ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main img {
+        height: 117px;
+        width: 117px;
+    }
+
+    .main .profilepicture {
+        display: none;
+    }
+    
+    .userhead .profilepicture {
+        display: flex;
+    }
+
+    .search input {
+        font-size: 18px;
+    }
+
+    .search button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .userinfo {
+        margin-left: 41px;
+    }
+
+    .userinfo h2 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 39px;
+    }
+    
+    .userinfo h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .userinfo h4 {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .userdesc {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .userstats {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .userstats > * > span {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .userlink {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+
+}
+
+/* Desktop */
+@media screen and (min-width: 730px) {
+    .container {
+        width: 730px;
+        height: 586px;
+    }
+    .main {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: min-content auto; 
+    }
+
+    .main .userhead {
+        align-items: flex-start;
+    }
+    .main img {
+        height: 117px;
+        width: 117px;
+    }
+
+    .main .profilepicture {
+        grid-row: 1/5;
+    }
+
+    .userlink ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .userhead .profilepicture {
+        display: none;
+    }
+
+    .search input {
+        font-size: 18px;
+    }
+
+    .search button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .userinfo h2 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 39px;
+    }
+    
+    .userinfo h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .userinfo h4 {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .userdesc {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .userstats {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .userstats > * > span {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .userlink {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+}
+
+.container { 
+    display: grid;
+    grid-template-rows: 38px minmax(60px, 69px) auto;
+    margin: 31px 24px 31px 24px;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+}
+
+.header #toggledark, .header #togglelight {
+    text-transform: uppercase;
+    padding-right: 32px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+}
+
+.header #togglelight {
+    background: url(./images/icon-moon.svg) no-repeat center right;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(106deg) brightness(105%) contrast(101%);
+}
+
+.header #togglelight:hover {
+    filter: invert(78%) sepia(59%) saturate(1140%) hue-rotate(184deg) brightness(87%) contrast(89%);
+    color: #fff;
+}
+
+.header #toggledark {
+    background: url(./images/icon-sun.svg) no-repeat center right;
+    filter: invert(42%) sepia(11%) saturate(1775%) hue-rotate(178deg) brightness(94%) contrast(96%);
+}
+
+.header #toggledark:hover {
+    filter: invert(13%) sepia(17%) saturate(723%) hue-rotate(181deg) brightness(92%) contrast(94%);
+    color: #fff;
+
+}
+
+.header .hidden {
+    display: none;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    padding: 7px;
+    margin-bottom: 17.5px;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: url(./images/icon-search.svg) no-repeat left center;
+    padding-left: 45px;
+    font-weight: 400;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.search button {
+    color: #FFF;
+    padding: 12px 24px 12px 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.main {
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    padding: 24px;
+    display: grid;
+    gap: 24px;
+}
+
+.main img {
+    border-radius: 50%;
+}
+
+.userhead {
+    display: flex;
+    align-items: center;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.userstats {
+    padding: 18px 15px 18px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    border-radius: 10px;
+}
+
+.userstats > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userlink {
+    padding-left: 24px;
+}
+
+.userlink ul {
+    display: grid;
+}
+
+.userlink li {
+    padding-left: 13px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.userlink .nolink {
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.userlink #location {
+    list-style-image: url(./images/icon-location.svg);
+}
+
+.userlink #website {
+    list-style-image: url(./images/icon-website.svg);
+}
+
+.userlink #twitter {
+    list-style-image: url(./images/icon-twitter.svg);
+}
+
+.userlink #company {
+    list-style-image: url(./images/icon-company.svg);
+}
+
+#usernotfound {
+    position: relative;
+    white-space: nowrap;
+    color: hsla(0, 91%, 62%, 1);
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 15px;
+}
+:root {
+    --dark-a: #0079FF;
+    --dark-ab: #60ABFF;
+    --dark-b: #FEFEFE;
+    --dark-c: #141D2F;
+    --dark-d: #1E2A47;
+}
+
+body {
+    background: var(--dark-c)
+}
+
+.header {
+    color: #FFF;
+}
+
+.search, .main {
+    background: var(--dark-d);
+}
+
+.search input {
+    color: #FFF;
+}
+
+.search .inactive {
+    background: var(--dark-a)
+}
+
+.search .active {
+    background: var(--dark-ab)
+}
+
+.userinfo h2 {
+    color: #FFF;
+}
+
+.userinfo h3 {
+    color: var(--dark-a);
+}
+
+.userinfo h4 {
+    color: #FFF;
+}
+
+.userdesc {
+    color: #FFF;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+.userstats {
+    background: var(--dark-c);
+    color: #FFF;
+}
+
+.userstats > * > span {
+    color: #FFF;
+}
+
+.userlink {
+    color: #FFF;
+}
